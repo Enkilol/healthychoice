@@ -41,6 +41,8 @@ function messaggio() {
     
     const doc = document.createElement('h1');
     doc.innerText = mex;
+    
     const docDiv = document.getElementById('devmes');
     docDiv.appendChild(doc);
+
 }
