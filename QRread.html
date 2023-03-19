@@ -29,7 +29,8 @@
             <script>
               function onScanSuccess(decodedText, decodedResult) {
                 console.log(`Scan result: ${decodedText}`, decodedResult);
-                alert.href = `${decodedText}`;
+                const message = `Scan result: <a href="${decodedText}" target="_blank">${decodedText}</a>`;
+                window.alert(message);
                 html5QrcodeScanner.clear();
               }
               var html5QrcodeScanner = new Html5QrcodeScanner("reader", { fps: 10, qrbox: 150 });
