@@ -35,9 +35,15 @@ function messaggio() {
   { nome: 'Spinaci', stagioni: ['Inverno', 'Primavera'], vitamine: ['Vitamina K', 'Vitamina C', 'Ferro'] },
   { nome: 'Zucchine', stagioni: ['Estate'], vitamine: ['Vitamina C', 'Fibre', 'Potassio'] }
       ];
-      
 
     var x = lista[Math.round(Math.random() * (lista.length-1))]
+    var mex = ("La frutta/verdura che puoi provare oggi: " + x.nome + ". La stagione ideale per il consumo: " + x.stagioni + ". Le vitamine contenute in questo alimento sono: " + x.vitamine);
     
-    alert ("La frutta/verdura che puoi provare oggi: " + x.nome + ". La stagione ideale per il consumo: " + x.stagioni + ". Le vitamine contenute in questo alimento sono: " + x.vitamine);
+  const doc = document.createElement('h1');
+  doc.innerText = mex;
+  
+  const docDiv = document.getElementById('devmes');
+
+  // Aggiungi il link all'interno dell'elemento "result"
+  resultDiv.appendChild(doc);
 }
