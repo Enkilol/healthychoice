@@ -39,7 +39,7 @@ function messaggio() {
     var x = lista[Math.round(Math.random() * (lista.length-1))]
     var mex = ("La frutta/verdura che puoi provare oggi: " + x.nome + ". La stagione ideale per il consumo: " + x.stagioni + ". Le vitamine contenute in questo alimento sono: " + x.vitamine);
     
-    const doc = document.createElement('h1');
+    const doc = document.createElement('h4');
     doc.innerText = mex;
     
     const docDiv = document.getElementById('devmes');
