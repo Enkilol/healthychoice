@@ -29,9 +29,16 @@
             <script>
               function onScanSuccess(decodedText, decodedResult) {
                 console.log(`Scan result: ${decodedText}`, decodedResult);
-                const message = <a href="${decodedText}" target="_blank">${decodedText}</a>;
-                window.alert(message);
-                html5QrcodeScanner.clear();
+                const link = document.createElement('a');
+                link.href = decodedText;
+                link.innerText = decodedText;
+
+                // Recupera l'elemento con id "result"
+                const resultDiv = document.getElementById('result');
+
+                 // Aggiungi il link all'interno dell'elemento "result"
+                    resultDiv.appendChild(link);
+                
               }
               var html5QrcodeScanner = new Html5QrcodeScanner("reader", { fps: 10, qrbox: 150 });
               html5QrcodeScanner.render(onScanSuccess);
