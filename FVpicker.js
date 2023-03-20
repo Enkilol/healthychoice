@@ -1,7 +1,7 @@
 
 function imgSwit() {
     var immagine = document.getElementById("ruota");
-    immagine.setAttribute("src", "animazione.gif");
+    immagine.setAttribute("src", "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTZkNTczOTA0OTkyMDZjNDg3NjI3ZmIyNTg4MDg4NDZiNzk0YWQ3NiZjdD1n/wgJI5oiIydBVO44xdi/giphy.gif");
     setTimeout(trasferimento, 3000);
   }
 
