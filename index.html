@@ -6,35 +6,32 @@
     <meta name="viewport" content="width= device-width, initial-scale=1.0">
     <title>Healthy Center </title>
     <link rel="stylesheet" href="stile.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
     <header>
         <img src="healthy.png" style="width: 100%; max-width: 100%; alt: Iniziative;" class="center">
 
-        <div class="topnav" id="myTopnav">
+    
         <nav class="navbar">
-            <a href="index.html">Home</a>
-            <a href="QRread.html">Lettore QR</a>
-            <a href="checkIngredienti.html">Ingredienti</a>
-            <a href="info.html">Info</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
+             <button class="menu-toggle" aria-label="Toggle menu">
+    <span class="hamburger-icon"></span>
+  </button>
+            <ul>
+                <li> <a href="index.html">Home</a></li>
+                <li> <a href="QRread.html">Lettore QR</a> </li>
+                <li><a href="checkIngredienti.html">Ingredienti</a></li>
+                <li><a href="info.html">Info</a></li>
+            </ul>
         </nav>
-        </div>
+        
+<script>
+const menuToggle = document.querySelector('.menu-toggle');
+const navList = document.querySelector('nav ul');
+menuToggle.addEventListener('click', function() {
+  navList.classList.toggle('show');
+});
+</script>
 
     </header>
 
-    <script>
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
-    </script>
 
 </head>
 
