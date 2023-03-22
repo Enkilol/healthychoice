@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR scanner</title>
+    <link rel="stylesheet" href="stile.css">
+
+    <header>
+        <img src="healthy.png" style="width: 100%; max-width: 100%; alt: Iniziative;" class="center">
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="QRread.html">Lettore QR</a>
+            <a href="checkIngredienti.html">Ingredienti</a>
+            <a href="info.html">Info</a>
+        </nav>
+
+    </header>
+
+</head>
+
+<body>
+    <h1
+        style="text-align: center; background-color: rgb(225, 116, 0); color: aliceblue; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+        Per scannerizzare i QR code</h1>
+
+    <p style="text-align: center;">Hai trovato un QR su un prodotto? utilizza lo scanner per leggere il link</p>
+
+    <h2>Risultato della scansione: </h2>
+    <div id=result style="text-align: center;">
+
+    </div>
+
+    <div class="container" style="text-align: center;">
+        <div id="reader" style="width: 300px; height: 300px; margin: 0 auto;"></div>
+        <script src="Scanner.js"></script>
+
+        <script>
+            function onScanSuccess(decodedText, decodedResult) {
+                console.log(`Scan result: ${decodedText}`, decodedResult);
+                const link = document.createElement('a');
+                link.href = decodedText;
+                link.innerText = decodedText;
+
+                // Recupera l'elemento con id "result"
+                const resultDiv = document.getElementById('result');
+
+                // Aggiungi il link all'interno dell'elemento "result"
+                resultDiv.appendChild(link);
+
+            }
+            var html5QrcodeScanner = new Html5QrcodeScanner("reader", { fps: 10, qrbox: 150 });
+            html5QrcodeScanner.render(onScanSuccess);
+        </script>
+    </div>
+
+    <div style="margin-top: 30px;">
+        <img onclick="location.href='https://www.adiconsum.it'" src="Banner.png"
+            style="width: 100%; alt: Iniziative;" class="center">
+    </div>
+</body>
+
+<h3 style="text-align:center; background-color: grey; color: whitesmoke;">2023</h3>
+
+</html>
