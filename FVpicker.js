@@ -131,7 +131,7 @@ const frutto = messaggio();
 function shareOnTwitter(frutto) {
   const tweetUrl = "https://twitter.com/intent/tweet?url=&text=";
   const tweetText = `Healyhy picker mi ha consigliato di mangiare: ${frutto.nome}. Il prodotto contiene queste vitamine: ${frutto.vitamine} #frutta #verdura #salute #food #healthyfood #${frutto.nome}`;
-  const mediaurl = `https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTZkNTczOTA0OTkyMDZjNDg3NjI3ZmIyNTg4MDg4NDZiNzk0YWQ3NiZjdD1n/wgJI5oiIydBVO44xdi/giphy.gif`;
+  const mediaurl = `https://enkilol.github.io/hr.jpg`;
   const url = tweetUrl + encodeURIComponent(tweetText)+ "&media="+encodeURIComponent(mediaurl);
   window.open(url);
 }
