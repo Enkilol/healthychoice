@@ -129,7 +129,7 @@ function messaggio() {
 const frutto = messaggio();
 
 function shareOnTwitter(frutto) {
-  const tweetUrl = "https://twitter.com/intent/tweet?url=https://www.adiconsum.it/&text=";
+  const tweetUrl = "https://twitter.com/intent/tweet?url=&text=";
   const tweetText = `Healyhy picker mi ha consigliato di mangiare: ${frutto.nome}. Il prodotto contiene queste vitamine: ${frutto.vitamine} #frutta #verdura #salute #food #healthyfood #${frutto.nome}`;
   const mediaurl = `${frutto.immagine}`;
   const url = tweetUrl + encodeURIComponent(tweetText)+ "&media="+encodeURIComponent(mediaurl);
