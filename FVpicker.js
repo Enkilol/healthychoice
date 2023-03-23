@@ -129,7 +129,7 @@ function messaggio() {
 const frutto = messaggio();
 
 function shareOnTwitter(frutto) {
-  const tweetUrl = "https://twitter.com/intent/tweet?url=&text=";
+  const tweetUrl = "https://twitter.com/intent/tweet?&text=";
   const tweetText = `Healyhy picker mi ha consigliato di mangiare: ${frutto.nome}. Il prodotto contiene queste vitamine: ${frutto.vitamine} #frutta #verdura #salute #food #healthyfood #${frutto.nome}`;
   const mediaUrl = "https://media1.giphy.com/media/gPqBCc8xZuW4xApjqB/giphy.gif?cid=ecf05e47mwb79fjpp8l2utdj4z5pvyutzirak44eg7jiq8vm&rid=giphy.gif&ct=g";
   const url = tweetUrl + encodeURIComponent(tweetText) + "&media=" + encodeURIComponent(mediaUrl);
